@@ -26,7 +26,7 @@ output/              ← gitignored, generato a runtime
 
 ## Esecuzione
 ```bash
-export ANTHROPIC_API_KEY="sk-ant-..."
+export ANTHROPIC_API_KEY="incolla-qui-la-chiave"
 pip install -r requirements.txt
 python pipeline.py --playlist "https://www.youtube.com/playlist?list=PLxxx"
 python pipeline.py --playlist "..." --limit 3          # test su 3 video

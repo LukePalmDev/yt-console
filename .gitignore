@@ -4,6 +4,7 @@ output/
 # Environment
 .env
 .env.*
+!.env.example
 
 # Python
 __pycache__/

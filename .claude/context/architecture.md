@@ -52,7 +52,7 @@ Campi principali (vedi `EXTRACTION_PROMPT` in pipeline.py):
 
 ## Decisioni architetturali
 - **Single-file**: bassa complessità, tool monouso. Se cresce oltre 500 righe, separare in `src/`.
-- **Subprocess yt-dlp** invece di API YouTube: evita OAuth, funziona con playlist pubbliche e private (con cookie).
+- **Subprocess yt-dlp** invece di API YouTube: evita OAuth e funziona con playlist pubbliche.
 - **Cache trascritti su file**: i trascritti non cambiano nel tempo, la cache evita rate limiting di YouTube e rende il `--resume` efficiente.
 - **Appiattimento manuale Excel**: `pd.json_normalize()` produce colonne con nomi tipo `console.nome` poco leggibili. L'appiattimento manuale permette nomi italiani e controllo esplicito.
 - **Trascritto troncato a 120k char**: evita di superare il context window con trascritti molto lunghi.
